@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abid Ali Panhwar - Full-Stack Developer specializing in building exceptional digital experiences. View my portfolio of web applications and software projects.">
+    <meta name="keywords" content="Full-Stack Developer, Web Developer, Software Engineer, Portfolio, React, Node.js, JavaScript">
+    <meta name="author" content="Abid Ali Panhwar">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Abid Ali Panhwar | Full-Stack Developer">
+    <meta property="og:description" content="Full-Stack Developer specializing in building exceptional digital experiences.">
+    <meta property="og:image" content="d:\my data\IMG_20230219_150558079.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Abid Ali Panhwar | Full-Stack Developer</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">Abid Ali</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting animate-on-scroll">Hello, I'm</p>
+                <h1 class="hero-name animate-on-scroll">Abid Ali Panhwar</h1>
+                <h2 class="hero-title animate-on-scroll">Full-Stack Developer</h2>
+                <p class="hero-tagline animate-on-scroll">I craft elegant solutions to complex problems, building digital experiences that make a difference.</p>
+                <div class="hero-cta animate-on-scroll">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual animate-on-scroll">
+                <div class="hero-image-wrapper">
+                    <img src="profile.jpg.jpg" alt="Abid Ali Panhwar - Full-Stack Developer" class="hero-profile-image">
+                    <div class="hero-decoration hero-decoration-1"></div>
+                    <div class="hero-decoration hero-decoration-2"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+            <div class="scroll-icon">
+                <span class="scroll-dot"></span>
+            </div>
+            <span class="scroll-text">Scroll</span>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <header class="section-header">
+                <span class="section-label animate-on-scroll">Get to Know Me</span>
+                <h2 class="section-title animate-on-scroll">About Me</h2>
+            </header>
+            <div class="about-content">
+                <div class="about-image animate-on-scroll">
+                    <div class="about-image-wrapper">
+                        <img src="profile.jpg.jpg" alt="Abid Ali Panhwar" class="about-profile-image">
+                        <div class="about-decoration"></div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="30">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text animate-on-scroll">
+                    <h3 class="about-heading">Passionate about creating impactful digital solutions</h3>
+                    <p class="about-description">
+                        I'm a Full-Stack Developer based in San Francisco with a deep passion for building web applications that combine beautiful design with robust functionality. With over 5 years of experience in the tech industry, I've had the privilege of working with startups, agencies, and established companies to bring their digital visions to life.
+                    </p>
+                    <p class="about-description">
+                        My journey in tech began with a curiosity about how things work on the internet. That curiosity evolved into expertise across the entire development stack—from crafting pixel-perfect interfaces to architecting scalable backend systems. I believe that great software is not just about writing code; it's about understanding user needs and delivering solutions that truly make a difference.
+                    </p>
+                    <p class="about-description">
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge through tech meetups and blog posts. I'm always open to discussing new opportunities and interesting projects.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>Clean, maintainable code</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>User-centered design thinking</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>Agile development practices</span>
+                        </div>
+                        <div class="highlight-item">
+                            <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <span>Continuous learning mindset</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Let's Work Together</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <header class="section-header">
+                <span class="section-label animate-on-scroll">What I Do Best</span>
+                <h2 class="section-title animate-on-scroll">Skills & Expertise</h2>
+            </header>
+            <div class="skills-content">
+                <!-- Frontend Skills -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+                                <line x1="12" y1="22" x2="12" y2="15.5"/>
+                                <polyline points="22 8.5 12 15.5 2 8.5"/>
+                                <polyline points="2 15.5 12 8.5 22 15.5"/>
+                                <line x1="12" y1="2" x2="12" y2="8.5"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-category-title">Frontend Development</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript / TypeScript</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React / Next.js</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5 / CSS3 / SASS</span>
+                                <span class="skill-percentage">98%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="98"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Vue.js / Nuxt</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-category-title">Backend Development</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js / Express</span>
+                                <span class="skill-percentage">93%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="93"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python / Django / FastAPI</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL / MongoDB</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">GraphQL / REST APIs</span>
+                                <span class="skill-percentage">91%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="91"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & DevOps -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-category-title">Tools & DevOps</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git / GitHub / GitLab</span>
+                                <span class="skill-percentage">96%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="96"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Docker / Kubernetes</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">AWS / GCP / Vercel</span>
+                                <span class="skill-percentage">87%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="87"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">CI/CD / Testing</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design & Other -->
+                <div class="skill-category animate-on-scroll">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                                <path d="M2 2l7.586 7.586"/>
+                                <circle cx="11" cy="11" r="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-category-title">Design & Soft Skills</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Figma / Adobe XD</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">UI/UX Design Principles</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Problem Solving</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Team Collaboration</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <header class="section-header">
+                <span class="section-label animate-on-scroll">My Recent Work</span>
+                <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+            </header>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="currentColor" opacity="0.05"/>
+                                <rect x="20" y="20" width="360" height="30" rx="4" fill="currentColor" opacity="0.1"/>
+                                <circle cx="35" cy="35" r="6" fill="#ff5f56"/>
+                                <circle cx="55" cy="35" r="6" fill="#ffbd2e"/>
+                                <circle cx="75" cy="35" r="6" fill="#27ca40"/>
+                                <rect x="20" y="70" width="160" height="160" rx="8" fill="currentColor" opacity="0.08"/>
+                                <rect x="200" y="70" width="180" height="20" rx="4" fill="currentColor" opacity="0.1"/>
+                                <rect x="200" y="100" width="140" height="12" rx="2" fill="currentColor" opacity="0.06"/>
+                                <rect x="200" y="120" width="160" height="12" rx="2" fill="currentColor" opacity="0.06"/>
+                                <rect x="200" y="140" width="120" height="12" rx="2" fill="currentColor" opacity="0.06"/>
+                                <rect x="200" y="180" width="80" height="30" rx="4" fill="currentColor" opacity="0.1"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View live demo" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15 3 21 3 21 9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View source code" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Application</span>
+                        <h3 class="project-title">CloudSync Dashboard</h3>
+                        <p class="project-description">A comprehensive cloud management platform featuring real-time analytics, automated workflows, and multi-tenant architecture. Built for enterprise-scale operations with robust security measures.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="currentColor" opacity="0.05"/>
+                                <rect x="120" y="30" width="160" height="30" rx="15" fill="currentColor" opacity="0.1"/>
+                                <rect x="30" y="80" width="150" height="140" rx="12" fill="currentColor" opacity="0.08"/>
+                                <rect x="200" y="80" width="170" height="65" rx="8" fill="currentColor" opacity="0.08"/>
+                                <rect x="200" y="155" width="170" height="65" rx="8" fill="currentColor" opacity="0.08"/>
+                                <circle cx="105" cy="130" r="30" fill="currentColor" opacity="0.1"/>
+                                <rect x="60" y="175" width="90" height="10" rx="2" fill="currentColor" opacity="0.1"/>
+                                <rect x="70" y="195" width="70" height="8" rx="2" fill="currentColor" opacity="0.06"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View live demo" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15 3 21 3 21 9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View source code" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">E-Commerce</span>
+                        <h3 class="project-title">ShopStream Pro</h3>
+                        <p class="project-description">A modern e-commerce platform with AI-powered product recommendations, seamless checkout experience, and comprehensive inventory management. Handles 10K+ concurrent users.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Stripe</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Tailwind</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="currentColor" opacity="0.05"/>
+                                <path d="M50 200 L100 150 L150 170 L200 100 L250 130 L300 80 L350 110" stroke="currentColor" stroke-width="3" stroke-opacity="0.2" fill="none"/>
+                                <circle cx="100" cy="150" r="6" fill="currentColor" opacity="0.3"/>
+                                <circle cx="150" cy="170" r="6" fill="currentColor" opacity="0.3"/>
+                                <circle cx="200" cy="100" r="6" fill="currentColor" opacity="0.3"/>
+                                <circle cx="250" cy="130" r="6" fill="currentColor" opacity="0.3"/>
+                                <circle cx="300" cy="80" r="6" fill="currentColor" opacity="0.3"/>
+                                <circle cx="350" cy="110" r="6" fill="currentColor" opacity="0.3"/>
+                                <rect x="30" y="30" width="100" height="50" rx="8" fill="currentColor" opacity="0.08"/>
+                                <rect x="40" y="40" width="60" height="8" rx="2" fill="currentColor" opacity="0.1"/>
+                                <rect x="40" y="55" width="40" height="15" rx="2" fill="currentColor" opacity="0.15"/>
+                                <rect x="270" y="30" width="100" height="50" rx="8" fill="currentColor" opacity="0.08"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View live demo" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15 3 21 3 21 9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View source code" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Analytics Platform</span>
+                        <h3 class="project-title">DataViz Analytics</h3>
+                        <p class="project-description">An interactive data visualization platform that transforms complex datasets into actionable insights. Features customizable dashboards, real-time data streaming, and export capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">ClickHouse</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="250" fill="currentColor" opacity="0.05"/>
+                                <rect x="30" y="30" width="340" height="50" rx="8" fill="currentColor" opacity="0.08"/>
+                                <circle cx="60" cy="55" r="15" fill="currentColor" opacity="0.1"/>
+                                <rect x="90" y="45" width="120" height="10" rx="2" fill="currentColor" opacity="0.1"/>
+                                <rect x="90" y="60" width="80" height="8" rx="2" fill="currentColor" opacity="0.06"/>
+                                <rect x="300" y="45" width="50" height="20" rx="4" fill="currentColor" opacity="0.1"/>
+                                <rect x="30" y="95" width="340" height="50" rx="8" fill="currentColor" opacity="0.08"/>
+                                <circle cx="60" cy="120" r="15" fill="currentColor" opacity="0.1"/>
+                                <rect x="90" y="110" width="140" height="10" rx="2" fill="currentColor" opacity="0.1"/>
+                                <rect x="90" y="125" width="100" height="8" rx="2" fill="currentColor" opacity="0.06"/>
+                                <rect x="30" y="160" width="340" height="50" rx="8" fill="currentColor" opacity="0.08"/>
+                                <circle cx="60" cy="185" r="15" fill="currentColor" opacity="0.1"/>
+                                <rect x="90" y="175" width="100" height="10" rx="2" fill="currentColor" opacity="0.1"/>
+                                <rect x="90" y="190" width="130" height="8" rx="2" fill="currentColor" opacity="0.06"/>
+                            </svg>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View live demo" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15 3 21 3 21 9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View source code" target="_blank" rel="noopener noreferrer">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Productivity Tool</span>
+                        <h3 class="project-title">TaskFlow Manager</h3>
+                        <p class="project-description">A collaborative project management tool with Kanban boards, time tracking, and team communication features. Integrates with popular tools like Slack, GitHub, and Google Workspace.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">Prisma</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="projects-cta animate-on-scroll">
+                <a href="#" class="btn btn-outline">
+                    <span>View All Projects</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education section" id="education">
+        <div class="container">
+            <header class="section-header">
+                <span class="section-label animate-on-scroll">My Journey</span>
+                <h2 class="section-title animate-on-scroll">Education</h2>
+            </header>
+            <div class="education-content">
+                <div class="education-column">
+                    <h3 class="education-column-title animate-on-scroll">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                        <span>Education</span>
+                    </h3>
+                    <div class="timeline">
+                        <div class="timeline-item animate-on-scroll">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2022 - 2026</span>
+                                <h4 class="timeline-title">B.E in Software Engineering</h4>
+                                <span class="timeline-company">Mehran University of Engineering and Technology</span>
+                                <p class="timeline-description">Graduating with honors. Focus on software engineering, algorithms, and human-computer interaction. Senior project: AI-powered accessibility tool for visually impaired users.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item animate-on-scroll">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2022</span>
+                                <h4 class="timeline-title">AWS Solutions Architect</h4>
+                                <span class="timeline-company">Amazon Web Services</span>
+                                <p class="timeline-description">Professional certification demonstrating expertise in designing distributed systems on AWS, including compute, storage, database, and networking services.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item animate-on-scroll">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2021</span>
+                                <h4 class="timeline-title">Meta Frontend Developer</h4>
+                                <span class="timeline-company">Meta Professional Certificate</span>
+                                <p class="timeline-description">Advanced frontend development certification covering React, testing, accessibility, and performance optimization best practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery section" id="gallery">
+        <div class="container">
+            <header class="section-header">
+                <span class="section-label animate-on-scroll">Visual Portfolio</span>
+                <h2 class="section-title animate-on-scroll">Work Gallery</h2>
+            </header>
+            <div class="gallery-grid">
+                <!-- Small Interactive Projects -->
+                <a href="projects/calculator.html" class="gallery-item animate-on-scroll" target="_blank">
+                    <div class="gallery-image">
+                        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background gradient -->
+                            <defs>
+                                <linearGradient id="calcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#667eea"/>
+                                    <stop offset="100%" style="stop-color:#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="300" fill="url(#calcBg)"/>
+                            <!-- Calculator body -->
+                            <rect x="60" y="40" width="180" height="220" rx="20" fill="white" fill-opacity="0.95"/>
+                            <!-- Display -->
+                            <rect x="75" y="55" width="150" height="50" rx="10" fill="#1a1a2e"/>
+                            <text x="210" y="90" fill="white" font-size="24" font-family="Arial" text-anchor="end">42</text>
+                            <!-- Buttons row 1 -->
+                            <rect x="75" y="115" width="32" height="32" rx="8" fill="#ff6b6b"/>
+                            <rect x="113" y="115" width="32" height="32" rx="8" fill="#667eea"/>
+                            <rect x="151" y="115" width="32" height="32" rx="8" fill="#667eea"/>
+                            <rect x="189" y="115" width="32" height="32" rx="8" fill="#667eea"/>
+                            <!-- Buttons row 2 -->
+                            <rect x="75" y="153" width="32" height="32" rx="8" fill="#f0f0f0"/>
+                            <rect x="113" y="153" width="32" height="32" rx="8" fill="#f0f0f0"/>
+                            <rect x="151" y="153" width="32" height="32" rx="8" fill="#f0f0f0"/>
+                            <rect x="189" y="153" width="32" height="32" rx="8" fill="#667eea"/>
+                            <!-- Buttons row 3 -->
+                            <rect x="75" y="191" width="32" height="32" rx="8" fill="#f0f0f0"/>
+                            <rect x="113" y="191" width="32" height="32" rx="8" fill="#f0f0f0"/>
+                            <rect x="151" y="191" width="32" height="32" rx="8" fill="#f0f0f0"/>
+                            <rect x="189" y="191" width="32" height="32" rx="8" fill="#51cf66"/>
+                        </svg>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Calculator App</h3>
+                        <p class="gallery-category">Click to View →</p>
+                    </div>
+                </a>
+                <a href="projects/todo-app.html" class="gallery-item animate-on-scroll" target="_blank">
+                    <div class="gallery-image">
+                        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background gradient -->
+                            <defs>
+                                <linearGradient id="todoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#11998e"/>
+                                    <stop offset="100%" style="stop-color:#38ef7d"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="300" fill="url(#todoBg)"/>
+                            <!-- App card -->
+                            <rect x="40" y="50" width="220" height="200" rx="16" fill="white" fill-opacity="0.95"/>
+                            <!-- Input field -->
+                            <rect x="55" y="65" width="150" height="30" rx="8" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="1"/>
+                            <rect x="210" y="65" width="35" height="30" rx="8" fill="#11998e"/>
+                            <!-- Todo item 1 - completed -->
+                            <circle cx="70" cy="115" r="10" fill="#11998e"/>
+                            <path d="M65 115 L68 118 L75 111" stroke="white" stroke-width="2" fill="none"/>
+                            <rect x="90" y="108" width="120" height="14" rx="3" fill="#ccc"/>
+                            <!-- Todo item 2 -->
+                            <circle cx="70" cy="145" r="10" fill="none" stroke="#11998e" stroke-width="2"/>
+                            <rect x="90" y="138" width="140" height="14" rx="3" fill="#333"/>
+                            <!-- Todo item 3 -->
+                            <circle cx="70" cy="175" r="10" fill="none" stroke="#11998e" stroke-width="2"/>
+                            <rect x="90" y="168" width="100" height="14" rx="3" fill="#333"/>
+                            <!-- Stats -->
+                            <text x="55" y="215" fill="#666" font-size="10" font-family="Arial">Total: 3 tasks</text>
+                            <text x="180" y="215" fill="#11998e" font-size="10" font-family="Arial">1 done</text>
+                        </svg>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Todo App</h3>
+                        <p class="gallery-category">Click to View →</p>
+                    </div>
+                </a>
+                <a href="projects/weather-widget.html" class="gallery-item animate-on-scroll" target="_blank">
+                    <div class="gallery-image">
+                        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background gradient -->
+                            <defs>
+                                <linearGradient id="weatherBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#4facfe"/>
+                                    <stop offset="100%" style="stop-color:#00f2fe"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="300" fill="url(#weatherBg)"/>
+                            <!-- Widget card -->
+                            <rect x="40" y="45" width="220" height="210" rx="20" fill="white" fill-opacity="0.95"/>
+                            <!-- Sun icon -->
+                            <circle cx="150" cy="100" r="30" fill="#FFD93D"/>
+                            <circle cx="150" cy="100" r="22" fill="#FFE066"/>
+                            <!-- City name -->
+                            <text x="150" y="150" fill="#333" font-size="14" font-family="Arial" text-anchor="middle" font-weight="bold">San Francisco</text>
+                            <!-- Temperature -->
+                            <text x="150" y="185" fill="#333" font-size="36" font-family="Arial" text-anchor="middle" font-weight="300">22°C</text>
+                            <!-- Weather description -->
+                            <text x="150" y="205" fill="#888" font-size="12" font-family="Arial" text-anchor="middle">Sunny</text>
+                            <!-- Details -->
+                            <rect x="55" y="220" width="55" height="25" rx="6" fill="#f0f0f0"/>
+                            <rect x="122" y="220" width="55" height="25" rx="6" fill="#f0f0f0"/>
+                            <rect x="189" y="220" width="55" height="25" rx="6" fill="#f0f0f0"/>
+                            <text x="82" y="237" fill="#666" font-size="9" font-family="Arial" text-anchor="middle">💧 45%</text>
+                            <text x="150" y="237" fill="#666" font-size="9" font-family="Arial" text-anchor="middle">💨 12km</text>
+                            <text x="216" y="237" fill="#666" font-size="9" font-family="Arial" text-anchor="middle">🌡️ 20°</text>
+                        </svg>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Weather Widget</h3>
+                        <p class="gallery-category">Click to View →</p>
+                    </div>
+                </a>
+                <a href="projects/quiz-app.html" class="gallery-item animate-on-scroll" target="_blank">
+                    <div class="gallery-image">
+                        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background gradient -->
+                            <defs>
+                                <linearGradient id="quizBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f093fb"/>
+                                    <stop offset="100%" style="stop-color:#f5576c"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="300" height="300" fill="url(#quizBg)"/>
+                            <!-- Quiz card -->
+                            <rect x="35" y="45" width="230" height="210" rx="20" fill="white" fill-opacity="0.95"/>
+                            <!-- Progress bar -->
+                            <rect x="50" y="60" width="200" height="8" rx="4" fill="#eee"/>
+                            <rect x="50" y="60" width="80" height="8" rx="4" fill="#f093fb"/>
+                            <!-- Question text -->
+                            <text x="50" y="90" fill="#999" font-size="10" font-family="Arial">Question 2 of 5</text>
+                            <text x="50" y="115" fill="#333" font-size="12" font-family="Arial" font-weight="bold">What does HTML</text>
+                            <text x="50" y="130" fill="#333" font-size="12" font-family="Arial" font-weight="bold">stand for?</text>
+                            <!-- Options -->
+                            <rect x="50" y="145" width="200" height="28" rx="8" fill="#f8f9fa" stroke="#eee" stroke-width="1"/>
+                            <rect x="50" y="178" width="200" height="28" rx="8" fill="#f093fb"/>
+                            <rect x="50" y="211" width="200" height="28" rx="8" fill="#f8f9fa" stroke="#eee" stroke-width="1"/>
+                            <!-- Option indicators -->
+                            <circle cx="65" cy="159" r="5" fill="none" stroke="#ccc" stroke-width="1.5"/>
+                            <circle cx="65" cy="192" r="5" fill="white"/>
+                            <circle cx="65" cy="225" r="5" fill="none" stroke="#ccc" stroke-width="1.5"/>
+                            <!-- Option text hints -->
+                            <rect x="78" y="155" width="100" height="8" rx="2" fill="#ddd"/>
+                            <rect x="78" y="188" width="120" height="8" rx="2" fill="white" fill-opacity="0.8"/>
+                            <rect x="78" y="221" width="90" height="8" rx="2" fill="#ddd"/>
+                        </svg>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Quiz App</h3>
+                        <p class="gallery-category">Click to View →</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <header class="section-header">
+                <span class="section-label animate-on-scroll">Get In Touch</span>
+                <h2 class="section-title animate-on-scroll">Let's Work Together</h2>
+            </header>
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <p class="contact-intro">I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:abidguru97@gmail.com" class="contact-value">abidguru97@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Mehran University, Jamshoro, Pakistan</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Availability</span>
+                                <span class="contact-value">Open to opportunities</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter Profile">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Dribbble Profile">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-6.953.666-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form animate-on-scroll" id="contactForm" action="https://formspree.io/f/mjgebapl" method="POST" novalidate>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required autocomplete="name">
+                        <span class="form-error" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email">
+                        <span class="form-error" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry" required>
+                        <span class="form-error" id="subjectError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project..." required rows="5"></textarea>
+                        <span class="form-error" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading">
+                            <svg class="spinner" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="60" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>Message sent successfully! I'll get back to you soon.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">
+                        <span class="logo-text">Abid Ali</span>
+                    </a>
+                    <p class="footer-tagline">Building digital experiences that matter.</p>
+                </div>
+                <nav class="footer-nav">
+                    <div class="footer-nav-group">
+                        <h4 class="footer-nav-title">Navigation</h4>
+                        <ul class="footer-nav-list">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-group">
+                        <h4 class="footer-nav-title">Connect</h4>
+                        <ul class="footer-nav-list">
+                            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                            <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                            <li><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Alex Morgan. All rights reserved.</p>
+                <p class="footer-credit">Designed & Built with <span class="heart">♥</span> by Alex Morgan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
