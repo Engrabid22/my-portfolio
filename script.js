@@ -224,18 +224,40 @@ function scrollToTop() {
 
 /**
  * Initialize Intersection Observer for scroll animations
+ * Uses modern best practices for smooth, performant reveal animations
  */
 function initScrollAnimations() {
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+        // Skip animations for users who prefer reduced motion
+        elements.animatedElements.forEach(element => {
+            element.classList.add('visible');
+        });
+        return;
+    }
+    
+    // Adjust rootMargin for mobile (trigger earlier on smaller screens)
+    const isMobile = window.innerWidth <= 768;
+    const rootMargin = isMobile ? '0px 0px -50px 0px' : '0px 0px -100px 0px';
+    
     const observerOptions = {
         root: null,
-        rootMargin: '0px',
+        rootMargin: rootMargin,
         threshold: 0.1
     };
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                // Add visible class to trigger animation
                 entry.target.classList.add('visible');
+                
+                // Remove will-change after animation completes for performance
+                setTimeout(() => {
+                    entry.target.classList.add('animation-complete');
+                }, 600);
                 
                 // Trigger skill bar animations
                 if (entry.target.classList.contains('skill-category')) {
@@ -246,6 +268,9 @@ function initScrollAnimations() {
                 if (entry.target.classList.contains('about-image')) {
                     animateStatCounters();
                 }
+                
+                // Unobserve element after animation (prevents re-triggering)
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
