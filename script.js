@@ -700,13 +700,206 @@ function init() {
 }
 
 // =========================================
+// Three.js 3D Hero Background
+// =========================================
+
+/**
+ * Initialize Three.js scene with floating 3D objects
+ * Interactive on mouse movement
+ */
+function initThreeJS() {
+    const canvas = document.getElementById('hero3dCanvas');
+    if (!canvas || typeof THREE === 'undefined') return;
+
+    // Scene setup
+    const scene = new THREE.Scene();
+    
+    // Camera
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 5;
+    
+    // Renderer
+    const renderer = new THREE.WebGLRenderer({
+        canvas: canvas,
+        alpha: true,
+        antialias: true
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    
+    // Get theme colors
+    const computedStyle = getComputedStyle(document.documentElement);
+    const primaryColor = computedStyle.getPropertyValue('--color-primary').trim() || '#0d9488';
+    
+    // Create materials with theme colors
+    const material = new THREE.MeshPhongMaterial({
+        color: new THREE.Color(primaryColor),
+        transparent: true,
+        opacity: 0.7,
+        shininess: 100
+    });
+    
+    const wireMaterial = new THREE.MeshBasicMaterial({
+        color: new THREE.Color(primaryColor),
+        wireframe: true,
+        transparent: true,
+        opacity: 0.3
+    });
+    
+    // Create floating shapes group
+    const shapesGroup = new THREE.Group();
+    
+    // Main icosahedron (geometric sphere)
+    const icosahedronGeometry = new THREE.IcosahedronGeometry(1, 1);
+    const icosahedron = new THREE.Mesh(icosahedronGeometry, material);
+    icosahedron.position.set(2.5, 0.5, -1);
+    shapesGroup.add(icosahedron);
+    
+    // Wireframe torus
+    const torusGeometry = new THREE.TorusGeometry(0.7, 0.2, 16, 50);
+    const torus = new THREE.Mesh(torusGeometry, wireMaterial);
+    torus.position.set(-3, -1, -2);
+    shapesGroup.add(torus);
+    
+    // Small octahedron
+    const octahedronGeometry = new THREE.OctahedronGeometry(0.5, 0);
+    const octahedron = new THREE.Mesh(octahedronGeometry, material.clone());
+    octahedron.material.opacity = 0.5;
+    octahedron.position.set(-2, 1.5, -1.5);
+    shapesGroup.add(octahedron);
+    
+    // Dodecahedron
+    const dodecahedronGeometry = new THREE.DodecahedronGeometry(0.4, 0);
+    const dodecahedron = new THREE.Mesh(dodecahedronGeometry, wireMaterial.clone());
+    dodecahedron.material.opacity = 0.4;
+    dodecahedron.position.set(3.5, -1.5, -2.5);
+    shapesGroup.add(dodecahedron);
+    
+    // Small floating spheres
+    const sphereGeometry = new THREE.SphereGeometry(0.15, 16, 16);
+    const spherePositions = [
+        { x: 1, y: 2, z: -3 },
+        { x: -1.5, y: -2, z: -2 },
+        { x: 4, y: 1, z: -4 },
+        { x: -4, y: 0.5, z: -3 }
+    ];
+    
+    spherePositions.forEach((pos, index) => {
+        const sphere = new THREE.Mesh(sphereGeometry, material.clone());
+        sphere.material.opacity = 0.4 + (index * 0.1);
+        sphere.position.set(pos.x, pos.y, pos.z);
+        shapesGroup.add(sphere);
+    });
+    
+    scene.add(shapesGroup);
+    
+    // Lighting
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+    
+    const pointLight = new THREE.PointLight(new THREE.Color(primaryColor), 1, 100);
+    pointLight.position.set(5, 5, 5);
+    scene.add(pointLight);
+    
+    const pointLight2 = new THREE.PointLight(0xffffff, 0.5, 100);
+    pointLight2.position.set(-5, -5, 5);
+    scene.add(pointLight2);
+    
+    // Mouse tracking
+    let mouseX = 0;
+    let mouseY = 0;
+    let targetX = 0;
+    let targetY = 0;
+    
+    document.addEventListener('mousemove', (event) => {
+        mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+        mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+    
+    // Animation loop
+    let time = 0;
+    
+    function animate() {
+        requestAnimationFrame(animate);
+        
+        time += 0.01;
+        
+        // Smooth mouse following
+        targetX += (mouseX - targetX) * 0.05;
+        targetY += (mouseY - targetY) * 0.05;
+        
+        // Rotate shapes group based on mouse
+        shapesGroup.rotation.y = targetX * 0.5;
+        shapesGroup.rotation.x = targetY * 0.3;
+        
+        // Animate individual shapes with floating effect
+        icosahedron.rotation.x += 0.005;
+        icosahedron.rotation.y += 0.008;
+        icosahedron.position.y = 0.5 + Math.sin(time) * 0.3;
+        
+        torus.rotation.x += 0.01;
+        torus.rotation.y += 0.005;
+        torus.position.y = -1 + Math.sin(time + 1) * 0.2;
+        
+        octahedron.rotation.x += 0.008;
+        octahedron.rotation.z += 0.01;
+        octahedron.position.y = 1.5 + Math.sin(time + 2) * 0.25;
+        
+        dodecahedron.rotation.y += 0.006;
+        dodecahedron.rotation.z += 0.008;
+        dodecahedron.position.y = -1.5 + Math.sin(time + 3) * 0.2;
+        
+        // Animate spheres
+        shapesGroup.children.forEach((child, index) => {
+            if (child.geometry.type === 'SphereGeometry') {
+                child.position.y += Math.sin(time + index) * 0.002;
+            }
+        });
+        
+        renderer.render(scene, camera);
+    }
+    
+    animate();
+    
+    // Update colors when theme changes
+    const observer = new MutationObserver(() => {
+        const newStyle = getComputedStyle(document.documentElement);
+        const newPrimaryColor = newStyle.getPropertyValue('--color-primary').trim() || '#0d9488';
+        const threeColor = new THREE.Color(newPrimaryColor);
+        
+        shapesGroup.children.forEach(child => {
+            if (child.material) {
+                child.material.color = threeColor;
+            }
+        });
+        pointLight.color = threeColor;
+    });
+    
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-theme']
+    });
+}
+
+// =========================================
 // DOM Ready
 // =========================================
 
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', () => {
+        init();
+        initThreeJS();
+    });
 } else {
     init();
+    initThreeJS();
 }
 
 // =========================================
